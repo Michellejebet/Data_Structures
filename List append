@@ -1,0 +1,71 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNuRofMJC387/0Qq5Oct6U6",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Michellejebet/Data_Structures/blob/main/List%20append\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ppw5dlbJPJWI",
+        "outputId": "ae8ffa31-d4ee-4d9a-bd14-4596313e8055"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Index of 30: 3\n",
+            "Final list: [10, 15, 20, 30, 40, 50, 60]\n"
+          ]
+        }
+      ],
+      "source": [
+        "\n",
+        "my_list = []\n",
+        "\n",
+        "my_list.append(10)\n",
+        "my_list.append(20)\n",
+        "my_list.append(30)\n",
+        "my_list.append(40)\n",
+        "my_list.insert(1, 15)\n",
+        "\n",
+        "my_list.extend([50, 60, 70])\n",
+        "\n",
+        "my_list.pop()\n",
+        "\n",
+        "my_list.sort()\n",
+        "index_of_30 = my_list.index(30)\n",
+        "print(\"Index of 30:\", index_of_30)\n",
+        "\n",
+        "print(\"Final list:\", my_list)\n"
+      ]
+    }
+  ]
+}
