@@ -1,0 +1,76 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOs/b5Dq6jDYqmyvSpB4hXH",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Michellejebet/Data_Structures/blob/main/A%20simple%20Calculator\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SWnmnxy1hYVW",
+        "outputId": "79fe4aa9-f341-406a-fd33-95cecaade7de"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the first number: 10\n",
+            "Enter the second number: 2\n",
+            "Enter the operation (+, -, *, /): /\n",
+            "10.0 / 2.0 = 5.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "\n",
+        "num1 = float(input(\"Enter the first number: \"))\n",
+        "num2 = float(input(\"Enter the second number: \"))\n",
+        "operation = input(\"Enter the operation (+, -, *, /): \")\n",
+        "if operation == \"+\":\n",
+        "    result = num1 + num2\n",
+        "    print(f\"{num1} + {num2} = {result}\")\n",
+        "elif operation == \"-\":\n",
+        "    result = num1 - num2\n",
+        "    print(f\"{num1} - {num2} = {result}\")\n",
+        "elif operation == \"*\":\n",
+        "    result = num1 * num2\n",
+        "    print(f\"{num1} * {num2} = {result}\")\n",
+        "elif operation == \"/\":\n",
+        "    if num2 != 0:\n",
+        "        result = num1 / num2\n",
+        "        print(f\"{num1} / {num2} = {result}\")\n",
+        "    else:\n",
+        "        print(\"Error: Division by zero is not allowed.\")\n",
+        "else:\n",
+        "    print(\"Invalid operation. Please choose from +, -, *, /.\")\n"
+      ]
+    }
+  ]
+}
