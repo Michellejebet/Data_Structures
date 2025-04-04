@@ -1,0 +1,85 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "toc_visible": true,
+      "authorship_tag": "ABX9TyPRY0PUFb9c+hhW9yVjizw4",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Michellejebet/Data_Structures/blob/main/file_reading\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "p03Hd3IPahQF",
+        "outputId": "64201783-9c9d-45f0-b22b-8a9cee2e0c29"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the file name to read: data.txt\n",
+            "Error: The file does not exist. Please check the filename and try again.\n"
+          ]
+        }
+      ],
+      "source": [
+        "def modify_content(content):\n",
+        "    \"\"\"Modify the content by converting it to uppercase.\"\"\"\n",
+        "    return content.upper()\n",
+        "\n",
+        "def main():\n",
+        "    try:\n",
+        "\n",
+        "        input_filename = input(\"Enter the file name to read: \")\n",
+        "\n",
+        "        with open(input_filename, 'r') as file:\n",
+        "            content = file.read()\n",
+        "\n",
+        "        modified_content = modify_content(content)\n",
+        "\n",
+        "\n",
+        "        output_filename = \"modified_\" + input_filename\n",
+        "\n",
+        "        with open(output_filename, 'w') as file:\n",
+        "            file.write(modified_content)\n",
+        "\n",
+        "        print(f\"Modified content saved to {output_filename}\")\n",
+        "\n",
+        "    except FileNotFoundError:\n",
+        "        print(\"Error: The file does not exist. Please check the filename and try again.\")\n",
+        "    except PermissionError:\n",
+        "        print(\"Error: Permission denied. You might not have access to this file.\")\n",
+        "    except Exception as e:\n",
+        "        print(f\"An unexpected error occurred: {e}\")\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    main()\n"
+      ]
+    }
+  ]
+}
